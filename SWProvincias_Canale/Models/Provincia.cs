@@ -9,8 +9,8 @@ namespace SWProvincias_Canale.Models
     {
         [Key]
         public int IdProvincia { get; set; }
-        [Column(TypeName = "varchar")]
-        [StringLength(50)]
+
+        [Column(TypeName = "varchar(50)")]
         [Required]
         public string Nombre { get; set; }
 

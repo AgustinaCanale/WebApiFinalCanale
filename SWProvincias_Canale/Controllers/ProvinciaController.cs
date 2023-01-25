@@ -75,9 +75,9 @@ namespace SWProvincias_Canale.Controllers
         public ActionResult<Provincia> Delete(int id)
         {
 
-            Provincia provincia = (from c in context.Provincias
-                           where c.IdProvincia == id
-                           select c).SingleOrDefault();
+            Provincia provincia = (from p in context.Provincias
+                           where p.IdProvincia == id
+                           select p).SingleOrDefault();
             if (provincia == null)
             {
                 return NotFound();
