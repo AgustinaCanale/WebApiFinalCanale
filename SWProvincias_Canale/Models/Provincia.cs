@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SWProvincias_Canale.Models
 {
@@ -7,6 +9,9 @@ namespace SWProvincias_Canale.Models
     {
         [Key]
         public int IdProvincia { get; set; }
+        [Column(TypeName = "varchar")]
+        [StringLength(50)]
+        [Required]
         public string Nombre { get; set; }
 
         public List<Ciudad> Ciudades { get; set; }
